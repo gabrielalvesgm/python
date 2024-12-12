@@ -16,13 +16,16 @@
     #Retornará a lista ordenada após o fim do bubble sort.
 
 
-lista = numeros = [88, 14, 85, 91, 63, 65, 86, 16, 19, 21, 72, 33, 10]
+numeros = [88, 14, 85, 91, 63, 65, 86, 16, 19, 21, 72, 33, 10]
 
 def bubble_sort(lista):
     n = len(lista)
     for i in range(n - 1):
-        for j in range(n -1 - i):
+        for j in range(n - 1 - i):
             if lista[j] > lista[j + 1]:
-                lista[j], lista[j + 1] = lista[j + 1], lista[j]   #desenpacotamento
+                lista[j], lista[j + 1] = lista[j + 1], lista[j]
     return lista
-bubble_sort(lista)
+
+resultado = bubble_sort(numeros)
+
+print("Lista ordenada:", resultado)
