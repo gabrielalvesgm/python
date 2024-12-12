@@ -25,3 +25,4 @@ def bubble_sort(lista):
             if lista[j] > lista[j + 1]:
                 lista[j], lista[j + 1] = lista[j + 1], lista[j]   #desenpacotamento
     return lista
+bubble_sort(lista)
