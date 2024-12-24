@@ -33,6 +33,7 @@ class ListaLigada:   #Criando a classe lista ligada.
         
 #Criando uma lista e testando a lista ligada.
 lista = ListaLigada() #Variáveis com um dado
+lista.inserir_primeiro(99)
 lista.inserir_primeiro(55)    #Variáveis com um dado
 lista.inserir_primeiro(40)    #Variáveis com um dado
 lista.inserir_primeiro(74)    #Variáveis com um dado
