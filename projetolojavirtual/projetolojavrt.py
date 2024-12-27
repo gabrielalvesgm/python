@@ -22,6 +22,27 @@ def get_db_connection():  #conectando a database ao server
 
 app = Flask(__name__) #Inicializando o app Flask
 
+#:-::-::-::-::-:Funções de auxílio:-::-::-::-::-:
+
+#Função que evita dois produtos com o mesmo nome.
+#A função implementa a lógica de que sempre que um nome já existente for adicionado no código ele receberá um (+1) no final.
+
+def gerar_nome_unico(nome, conn):
+    cur = conn.cursor()
+    cur.execute("SELECT nome FROM produtos WHERE nome LIKE ?", (f"{nome}%",))
+    nomes_existentes = [row[0] for row in cur.fetchall()]
+    
+    if nome not in nomes_existentes:
+        return nome
+    
+    contador = 2
+    while True:
+        novo_nome = f"{nome} ({contador})"
+        if novo_nome not in nomes_existentes:
+            return novo_nome
+        contador += 1
+
+
 #:-::-::-::-::-:Operações CRUD:-::-::-::-::-:
 
 @app.route('/')
@@ -42,12 +63,16 @@ def obter_produtos():
 def criar_produto():
     novo_produto = request.get_json()
     conn = get_db_connection()
+    
+    # Função auxiliar para evitar duplicatas
+    nome_unico = gerar_nome_unico(novo_produto["nome"], conn)
+     
     cur = conn.cursor()
     cur.execute("INSERT INTO produtos (nome, descricao) VALUES (?, ?)",
-                (novo_produto["nome"], novo_produto.get("descricao", None)))
+                (nome_unico, novo_produto.get("descricao", None))) 
     conn.commit()
     conn.close()
-    return jsonify({"message": "Produto criado com sucesso!"}), 201
+    return jsonify({"message": f"Produto '{nome_unico}' criado com sucesso!"}), 201
 
 @app.route('/produtos', methods=["PUT"])
 def atualizar_produto(id):
