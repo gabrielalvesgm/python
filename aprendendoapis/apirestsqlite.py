@@ -54,17 +54,17 @@ def atualizar_usuario(id):
     cur = conn.cursor()
     cur.execute('UPTADE usuarios SET nome = ?, email = ? WHERE id = ?',
                 (usuario_atualizado['nome'], usuario_atualizado['email'], id))
-    conn.comit()
+    conn.commit()
     conn.close()
     return jsonify({'mensagem': "Usuário atualizado com sucesso!"})
 
 
 @app.route('/usuarios/<int:id>', methods=['DELETE'])
 def deletar_usuario(id):
-    con = get_db_connection
+    conn = get_db_connection
     cur = conn.cursor()
     cur.execute('DELETE FROM usuarios WHERE id = ?', (id))
-    conn.comit()
+    conn.commit()
     conn.close()
     return jsonify({"mensagem": "Usuário deletado com sucesso."})
 
