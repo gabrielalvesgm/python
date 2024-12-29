@@ -1,0 +1,199 @@
+@charset "UTF-8";
+/* styles.css */
+
+
+/* FONTES */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+
+body {
+    margin: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: #EAEAEA;
+}
+/* HEADER */
+
+header {
+    background-color: #FF4C4C;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px rgb(0, 0, 0);
+}
+
+nav {
+    background-color: #FF8C42;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+margin-right: 20px;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: #FF4C4C;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 6px 10px;
+    margin: 0;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: 2px solid #FF4C4C;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-shadow: 1px 1px rgb(221, 221, 221);
+}
+
+nav ul li a:hover {
+    background-color: #FF4C4C;
+    color: white;
+    text-shadow: 1px 1px #000000;
+    box-shadow: 1px 1px #972c2ca4;
+}
+header nav form {
+    display: flex;
+    align-items: center;
+}
+
+header nav input[type="text"]{
+    padding: 7px;
+    margin-right: 5px;
+    border: 2px solid #FF4C4C;
+    border-radius: 5px;
+    font-size: 23px;
+    width: 110px;
+    color: #FF4C4C;
+    text-shadow: 1px 1px rgb(156, 156, 156);
+}
+header nav input[type="text"]::placeholder {
+    color: #FF4C4C;
+}
+
+header nav button {
+    display: none;
+}
+    
+
+/* Main */
+main {
+    padding: 20px;
+    background-color: #EAEAEA;
+}
+
+.container-descricao {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.377);
+}
+
+.container-descricao h2 {
+    margin: 0 0 10px 0;
+    font-size: 35px;
+    text-shadow: 1px 1px rgb(187, 187, 187);
+    box-shadow: 0 0 3px rgba(80, 80, 80, 0.274);
+}
+
+.descricao {
+    font-size: 23px;
+    color: #000000;
+    font-family: "Oswald";
+    text-shadow: 1px 1px rgb(187, 187, 187);
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.foto-perfil {
+    width: 250px;
+    height: 250px;
+    display: flex; /* Flexbox */
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.541);
+}
+.foto-perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.titulo-redes {
+    font-family: "Oswald";
+    text-shadow: 1px 1px rgba(168, 146, 146, 0.644);
+    font-size: 22px;
+    margin: 0px;
+}
+
+.links-redes {
+    flex: 2;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.links-redes h3 {
+    margin-top: 0;
+}
+
+.links-redes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links-redes ul li {
+    margin: 10px 0;
+}
+
+.links-redes ul li a {
+    text-decoration: none;
+    color: #FF4C4C;
+    transition: color 0.3s;
+}
+
+.links-redes ul li a:hover {
+    color: #FF8C42; 
+}
+
+.links-redes .icone {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}

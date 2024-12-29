@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Way - Página Principal</title>
+    <link rel="stylesheet" href="MyWayStyles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>MY WAY</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="MyWayPaginaPrincipal.html" target="_self">Página Principal</a></li>
+                <li><a href="MyWayMinhasMetas.html" target="_self">Minhas Metas</a></li>
+                <li><a href="MyWayMeuPerfil.html" target="_self">Meu Perfil</a></li>
+                <li>
+                    <!--BOTÃO DE BUSCA QUE DEVE SER CONECTADO A UM SERVIDOR (UTILIZANDO JAVASCRIPT E O BANCO DE DADOS SQL)-->
+                    <form action="#" method="GET">
+                        <input type="text" name="busca" placeholder="🔎Buscar...">
+                        <button type="submit">Buscar</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <section class="container-descricao">
+            <h2>Sobre o My Way</h2>
+            <p class="descricao" onclick="showPopup()">O My Way é uma plataforma interativa e inovadora desenvolvida para ajudar você a alcançar suas metas, transformar hábitos e conectar-se com uma comunidade que compartilha das mesmas ambições. Nosso objetivo é fornecer ferramentas práticas e um ambiente motivador para que você se torne protagonista da sua própria jornada de crescimento pessoal. "MY WAY".</p>
+            <p class="descricao">No My Way, acreditamos que todo objetivo é alcançável com um bom plano e     suporte adequado. Nossa plataforma oferece:
+                Gestão de Metas Personalizada: Organize e acompanhe seus objetivos de curto e longo prazo de forma clara e intuitiva.
+                Mudança de Hábitos: Monitore suas ações diárias para construir uma rotina que sustente seus sonhos.
+                Rede Social Inspiradora: Conecte-se com pessoas que compartilham dos mesmos desafios e conquistas, criando uma rede de apoio e troca de experiências.
+                Coaching com IA: Receba dicas e orientações personalizadas, adaptadas às suas metas específicas, para otimizar seu progresso.
+                Recomendações Personalizadas: Encontre perfis influentes e conteúdos relevantes para ajudá-lo a superar obstáculos em áreas específicas, como saúde, produtividade ou finanças.</p>
+        </section>
+        <section class="info-container">
+            <div class="foto-perfil">
+                <img src="imagens/fotodeperfil.jpg" alt="MinhaFoto">
+            </div>
+            <div class="links-redes">
+                <h3 class="titulo-redes">Minhas Redes Sociais</h3>
+                <ul>
+                    <li>
+                        <img src="imagens/github_logo_icon_229278.png" alt="Icone do GitHub" class="icone">
+                        <a href="https://github.com/gabrielalvesgm" target="_blank">Meu perfil do Github</a></li>
+                    <li>
+                        <img src="imagens/logolinkedin.png" alt="Icone do Linkedin" class="icone">
+                        <a href="https://www.linkedin.com/in/gabriel-alves32-/" target="_blank">Meu Perfil do Linkedin</a></li>
+                    <li>
+                        <img src="imagens/logogmail.png" alt="Icone do Gmail" class="icone">
+                        <a href="https://mail.google.com/mail/u/1/#sent?compose=jrjtWvMZdjlVpFxNhfjjbTLvzVxBRrSgDFdvFpmdTKNFlTzrjsztZzjgznHSvWVPHKTFZzsw" target="_blank">Meu Email para contato: <u>LGabrielAlvesGm@gmail.com</u></a></li>
+                    <li>
+                        <img src="imagens/logocelular.png" alt="Icone do Contato" class="icone">
+                        <a href="https://wa.me/81985799136" target="_blank">Telefone para contato: <u>+55 81 98579-9136 </u></a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Gabriel Alves - Criador do Projeto</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function showPopup() {
+            alert("Descrição completa do projeto 'My Way'. Aqui você pode colocar o texto completo.");
+        }
+    </script>
+</body>
+</html>
