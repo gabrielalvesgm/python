@@ -131,7 +131,7 @@ main {
 .foto-perfil {
     width: 250px;
     height: 250px;
-    display: flex; /* Flexbox */
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: #000000;

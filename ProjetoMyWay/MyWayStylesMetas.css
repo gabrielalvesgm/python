@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #EAEAEA;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #FF4C4C;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px rgb(0, 0, 0);
+}
+
+nav {
+    background-color: #FF8C42;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: #FF4C4C;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 6px 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: 2px solid #FF4C4C;
+    transition: background-color 0.3s;
+    text-shadow: 1px 1px rgb(221, 221, 221);
+}
+
+nav ul li a:hover {
+    background-color: #FF4C4C;
+    color: white;
+    text-shadow: 1px 1px #000000;
+    box-shadow: 1px 1px #972c2ca4;
+}
+
+header nav input[type="text"] {
+    padding: 7px;
+    margin-right: 5px;
+    border: 2px solid #FF4C4C;
+    border-radius: 5px;
+    font-size: 23px;
+    width: 110px;
+    color: #FF4C4C;
+    text-shadow: 1px 1px rgb(156, 156, 156);
+}
+
+header nav input[type="text"]::placeholder {
+    color: #FF4C4C;
+}
+
+header nav button {
+    display: none;
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+}
+
+/* Seção das Metas */
+.goals-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.goal-card {
+    background-color: #F5F4F4;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.goal-card:hover {
+    transform: scale(1.02);
+}
+
+.goal-card h3 {
+    font-size: 1.8rem;
+    color: #FF4C4C;
+    margin-bottom: 10px;
+}
+
+.goal-card p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Botão para adicionar novas metas */
+.add-goal-btn {
+    display: inline-block;
+    background-color: #FF8C42;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.add-goal-btn:hover {
+    background-color: #FF4C4C;
+}

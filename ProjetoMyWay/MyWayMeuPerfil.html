@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - My Way</title>
+    <link rel="stylesheet" href="MyWayStylesPerfil.css"> <!-- Arquivo CSS externo -->
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>MY WAY</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="MyWayPaginaPrincipal.html" target="_self">Página Principal</a></li>
+                <li><a href="MyWayMinhasMetas.html" target="_self">Minhas Metas</a></li>
+                <li><a href="MyWayMeuPerfil.html" target="_self">Meu Perfil</a></li>
+                <li>
+                    <!--BOTÃO DE BUSCA QUE DEVE SER CONECTADO A UM SERVIDOR (UTILIZANDO JAVASCRIPT E O BANCO DE DADOS SQL)-->
+                    <form action="#" method="GET">
+                        <input type="text" name="busca" placeholder="🔎Buscar...">
+                        <button type="submit">Buscar</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção "Meu Perfil" -->
+    <main class="main-content">
+        <section class="profile-section">
+            <!-- Img Perfil -->
+            <div class="imagem-perfil">
+                <div class="foto-perfil">
+                    <img src="imagens/fotodeperfil.jpg" alt="MinhaFoto">
+                </div>
+                <div class="info-perfil">
+                    <h3>Informações Pessoais</h3>
+                    <p>UserID: <span id="id-usuario">12345</span></p>
+                    <p>Nome: <span id="nome-usuario">Gabriel</span></p>
+                    <p>Idade: <span id="idade-usuario">22</span></p>
+                    <p>Localização: <span id="localizacao-usuario">Recife</span></p>
+                </div>
+            </div>
+
+            <!-- Sobre Mim e Goals -->
+            <div class="about-goals">
+                <div class="about-me">
+                    <h3>Sobre Mim</h3>
+                    <textarea maxlength="200" placeholder="Escreva um breve resumo sobre você..."></textarea>
+                </div>
+                <div class="goals">
+                    <h3>Goals</h3>
+                    <textarea placeholder="Adicione suas hashtags de metas... (#exemplo)"></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção principal com abas -->
+        <section class="objectives-section">
+            <div class="objective-box" data-title="Conquistados">Objetivos Conquistados</div>
+            <div class="objective-box" data-title="Conquistar">Objetivos a Conquistar</div>
+            <div class="objective-box" data-title="Evitar">Hábitos a Evitar</div>
+        </section>
+    </main>
+    <script src="MyWayScript.js"></script> <!-- Arquivo JS externo -->
+</body>
+</html>
