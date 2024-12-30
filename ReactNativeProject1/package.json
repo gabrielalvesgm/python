@@ -7,5 +7,8 @@
   },
   "dependencies": {
     "react-native": "0.76.5"
-  }
+  },
+  "devDependencies": {
+  "@react-native-community/cli": "latest"
+}
 }
