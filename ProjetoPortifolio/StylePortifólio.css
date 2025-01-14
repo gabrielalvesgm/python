@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+/* Estílos Portifólio pág 1 */
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(236, 236, 236);
+    font-family: "Roboto Mono";
+}
+
+header {
+    display: flex;
+    background-image: radial-gradient(circle, #354598, #414d8a);
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 50px;
+}
+
+.menu li {
+    flex: 1;
+    display: inline-block;
+    padding: 0 25px;
+}
+
+.menu li a {
+    min-width: 150px;
+    width: 275px;
+    height: 60px;
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #E3B422;
+    color: #ffffff;
+    border-radius: 20px;
+    transition: background-color 0.2s ease;
+    font-size: 35px;
+    display: block;
+}
+.menu li a:hover{
+    color: #45518E;
+    background-color: #ffc30e;
+    box-shadow: 0 5px 2pxrgb(41, 48, 83)E;
+}
+.main-content{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: rgb(199, 188, 188);
+}
+.perfil-img{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.perfil-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.dados {
+    display: inline-block;
+}

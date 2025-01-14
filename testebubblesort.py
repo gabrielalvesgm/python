@@ -1,31 +1,15 @@
-#AQUI IREMOS CRIAR NOSSA PRIMEIRA ORDENAÇÃO BUBBLESORT EM PYTHON.
+#TESTANDO O BUBBLE SORT!
 
-#Passo a passo:
-#Primeiro cria-se uma função (def) para encapsular o Bubble Sort e tornalo reutilizável.
-#Segundo cria-se um loop (for) para iterar sobre uma sequência (lista) ou em intervalos.
-    #O Bubble sorte irá comparar pares com o for.
-#Terceiro cria-se um (range) que irá criar uma sequência de números dentro de um intervalo.
-    #É necessário para controlar o número de iterações no loop.
-#Quarto Cria-se uma (len) que retorna o tamanho (quantidade de elementos)de 1 lista ou coleção
-    #len irá calcular o número de elementos na lista e definir os limites.
-#Cria-se uma condição (if) que irá definir elementos como verdadeiro ou falso.
-    #Verifica se os dois elementos estão fora de ordem e se precisam ser trocados de lugar.
-#Método de desempacotamento/troca de valores (a, b = b, a)
-    #Troca os valores de duas variáveis de forma conscisa e reorganiza os elementos na lista.
-#Fim da função com (return) sai da função e retorna o (valor)
-    #Retornará a lista ordenada após o fim do bubble sort.
+def bubble_sort(lista): #Criando a função bubble_sort que recebe uma lista.
+    n = len(lista) #Variável n recebe tamanho da lista.
+    for i in range(n - 1): #i percorre na range lista -1 (ultimo elemento por indice)
+        for j in range(n - 1 - i): #J percorre até o penultimo elemento (já que i é o último.)
+            if lista[j] > lista[j + 1]: #if compara o elemento atual e próximo na lista.
+                lista[j], lista[j + 1] = lista[j + 1], lista[j] #Se o elemento atual for maior que o próximo, trocam de posições.
+    return lista #retorna a lista ordenada.
 
+numeros = [88, 14, 85, 91, 63, 65, 86, 16, 19, 21, 72, 33, 10] #lista a ser ordenada.
 
-numeros = [88, 14, 85, 91, 63, 65, 86, 16, 19, 21, 72, 33, 10]
+resultado = bubble_sort(numeros) #Chama a função bubble_sort com a lista e armazena o resultado.
 
-def bubble_sort(lista):
-    n = len(lista)
-    for i in range(n - 1):
-        for j in range(n - 1 - i):
-            if lista[j] > lista[j + 1]:
-                lista[j], lista[j + 1] = lista[j + 1], lista[j]
-    return lista
-
-resultado = bubble_sort(numeros)
-
-print("Lista ordenada:", resultado)
+print("Lista ordenada:", resultado) #Mostra a lista ordenada.
